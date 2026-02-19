@@ -1,7 +1,7 @@
 .cell{
     width: 200px;
     height: 200px;
-    border: 1px solid black;
+    border: 1px solid blue;
     background-color: white;
     font-size: 150px;
     display: flex;
@@ -21,4 +21,8 @@
     text-align: center;
     font-family: "consolas";
     font-size: 50px;
+}
+.reset{
+     text-align: center;
+     justify-content: cen
 }

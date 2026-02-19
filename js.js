@@ -1,9 +1,16 @@
 var licznik = 1
 var znak = "O"
-
+var stan = 0
 function generuj(id){
 
+
+
     if(id == "d1"){
+
+if(stan == 1){
+    return
+}
+        
         if(document.getElementById("d1").innerHTML == znak){
             return
         }
@@ -21,6 +28,10 @@ function generuj(id){
     }
 
     if(id == "d2"){
+if(stan == 1){
+    return
+}
+
         if(document.getElementById("d2").innerHTML == znak){
             return
         }
@@ -38,6 +49,9 @@ function generuj(id){
     }
 
     if(id == "d3"){
+if(stan == 1){
+    return
+}
         if(document.getElementById("d3").innerHTML == znak){
             return
         }
@@ -55,6 +69,9 @@ function generuj(id){
     }
 
     if(id == "d4"){
+if(stan == 1){
+    return
+}   
         if(document.getElementById("d4").innerHTML == znak){
             return
         }
@@ -72,6 +89,9 @@ function generuj(id){
     }
 
     if(id == "d5"){
+            if(stan == 1){
+                return
+            }
         if(document.getElementById("d5").innerHTML == znak){
             return
         }
@@ -89,6 +109,9 @@ function generuj(id){
     }
 
     if(id == "d6"){
+if(stan == 1){
+    return
+}
         if(document.getElementById("d6").innerHTML == znak){
             return
         }
@@ -106,6 +129,9 @@ function generuj(id){
     }
 
     if(id == "d7"){
+if(stan == 1){
+    return
+}
         if(document.getElementById("d7").innerHTML == znak){
             return
         }
@@ -123,6 +149,9 @@ function generuj(id){
     }
 
     if(id == "d8"){
+if(stan == 1){
+    return
+}
         if(document.getElementById("d8").innerHTML == znak){
             return
         }
@@ -140,6 +169,9 @@ function generuj(id){
     }
 
     if(id == "d9"){
+if(stan == 1){
+    return
+}
         if(document.getElementById("d9").innerHTML == znak){
             return
         }
@@ -172,66 +204,75 @@ function wygrana(){
 
     if(d1 != "" && d1 == d2 && d2 == d3){
         document.querySelector(".win").innerHTML = "Wygrywa " + d1
-        document.getElementById("d1").style.backgroundColor = "red"
-        document.getElementById("d2").style.backgroundColor = "red"
-        document.getElementById("d3").style.backgroundColor = "red"
+        document.getElementById("d1").style.color = "green"
+        document.getElementById("d2").style.color = "green"
+        document.getElementById("d3").style.color = "green"
+            stan = 1
         return
     }
 
     if(d4 != "" && d4 == d5 && d5 == d6){
         document.querySelector(".win").innerHTML = "Wygrywa " + d4
-        document.getElementById("d4").style.backgroundColor = "red"
-        document.getElementById("d5").style.backgroundColor = "red"
-        document.getElementById("d6").style.backgroundColor = "red"
+        document.getElementById("d4").style.color = "green"
+        document.getElementById("d5").style.color = "green"
+        document.getElementById("d6").style.color = "green"
+        stan = 1
         return
+        
     }
 
     if(d7 != "" && d7 == d8 && d8 == d9){
         document.querySelector(".win").innerHTML = "Wygrywa " + d7
-        document.getElementById("d7").style.backgroundColor = "red"
-        document.getElementById("d8").style.backgroundColor = "red"
-        document.getElementById("d9").style.backgroundColor = "red"
+        document.getElementById("d7").style.color = "green"
+        document.getElementById("d8").style.color = "green"
+        document.getElementById("d9").style.color = "green"
+        stan = 1
         return
     }
 
     if(d1 != "" && d1 == d4 && d4 == d7){
         document.querySelector(".win").innerHTML = "Wygrywa " + d1
-        document.getElementById("d1").style.backgroundColor = "red"
-        document.getElementById("d4").style.backgroundColor = "red"
-        document.getElementById("d7").style.backgroundColor = "red"
+        document.getElementById("d1").style.color = "green"
+        document.getElementById("d4").style.color = "green"
+        document.getElementById("d7").style.color = "green"
+        stan = 1
         return
     }
 
     if(d2 != "" && d2 == d5 && d5 == d8){
         document.querySelector(".win").innerHTML = "Wygrywa " + d2
-        document.getElementById("d2").style.backgroundColor = "red"
-        document.getElementById("d5").style.backgroundColor = "red"
-        document.getElementById("d8").style.backgroundColor = "red"
+        document.getElementById("d2").style.color = "green"
+        document.getElementById("d5").style.color = "green"
+        document.getElementById("d8").style.color = "green"
+        stan = 1
         return
     }
 
     if(d3 != "" && d3 == d6 && d6 == d9){
         document.querySelector(".win").innerHTML = "Wygrywa " + d3
-        document.getElementById("d3").style.backgroundColor = "red"
-        document.getElementById("d6").style.backgroundColor = "red"
-        document.getElementById("d9").style.backgroundColor = "red"
+        document.getElementById("d3").style.color = "green"
+        document.getElementById("d6").style.color = "green"
+        document.getElementById("d9").style.color = "green"
+        stan = 1
         return
     }
 
     if(d1 != "" && d1 == d5 && d5 == d9){
         document.querySelector(".win").innerHTML = "Wygrywa " + d1
-        document.getElementById("d1").style.backgroundColor = "red"
-        document.getElementById("d5").style.backgroundColor = "red"
-        document.getElementById("d9").style.backgroundColor = "red"
+        document.getElementById("d1").style.color = "green"
+        document.getElementById("d5").style.color = "green"
+        document.getElementById("d9").style.color = "green"
+        stan = 1
         return
     }
 
     if(d3 != "" && d3 == d5 && d5 == d7){
         document.querySelector(".win").innerHTML = "Wygrywa " + d3
-        document.getElementById("d3").style.backgroundColor = "red"
-        document.getElementById("d5").style.backgroundColor = "red"
-        document.getElementById("d7").style.backgroundColor = "red"
+        document.getElementById("d3").style.color = "green"
+        document.getElementById("d5").style.color = "green"
+        document.getElementById("d7").style.color = "green"
+        stan = 1
         return
     }
-
+   
 }
